@@ -115,5 +115,10 @@ namespace CREntry_GR
             string strProdDate = dtProd.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
             mtProdDate.Text = strProdDate;
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
