@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CREntry_GR", "CREntry_GR\CR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChkResultLib", "CRLib\ChkResultLib.csproj", "{CA83FDE0-0672-4B4F-81AF-3020264AE8F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CREntry_OFF", "CREntry_OFF\CREntry_OFF.csproj", "{13E5CC05-232C-4AFC-BC01-C4FE4E352186}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CA83FDE0-0672-4B4F-81AF-3020264AE8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA83FDE0-0672-4B4F-81AF-3020264AE8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA83FDE0-0672-4B4F-81AF-3020264AE8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E5CC05-232C-4AFC-BC01-C4FE4E352186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E5CC05-232C-4AFC-BC01-C4FE4E352186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E5CC05-232C-4AFC-BC01-C4FE4E352186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E5CC05-232C-4AFC-BC01-C4FE4E352186}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
