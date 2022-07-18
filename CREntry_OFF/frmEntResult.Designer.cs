@@ -44,18 +44,17 @@
             this.txtEntryNo = new System.Windows.Forms.TextBox();
             this.txtJobNo = new System.Windows.Forms.TextBox();
             this.dgvResult = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.colNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTestCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTestMethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTestQuestion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStandart = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colResult1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colResult2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFlagValidate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlButton.SuspendLayout();
             this.pnlEntry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
@@ -126,7 +125,7 @@
             // 
             // txtRemark
             // 
-            this.txtRemark.Location = new System.Drawing.Point(830, 14);
+            this.txtRemark.Location = new System.Drawing.Point(830, 16);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(337, 91);
@@ -154,7 +153,7 @@
             // 
             this.dtConclusionDate.CalendarFont = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtConclusionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtConclusionDate.Location = new System.Drawing.Point(631, 73);
+            this.dtConclusionDate.Location = new System.Drawing.Point(631, 74);
             this.dtConclusionDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtConclusionDate.Name = "dtConclusionDate";
             this.dtConclusionDate.Size = new System.Drawing.Size(20, 26);
@@ -183,7 +182,7 @@
             // 
             this.dtProdDate.CalendarFont = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtProdDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtProdDate.Location = new System.Drawing.Point(631, 21);
+            this.dtProdDate.Location = new System.Drawing.Point(631, 22);
             this.dtProdDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtProdDate.Name = "dtProdDate";
             this.dtProdDate.Size = new System.Drawing.Size(20, 26);
@@ -227,73 +226,17 @@
             this.colNo,
             this.colTestCode,
             this.colTestMethod,
+            this.colTestQuestion,
             this.colStd,
             this.colMin,
             this.colMax,
-            this.colStandart,
-            this.colResult1,
-            this.colResult2,
+            this.colResult,
             this.colFlagValidate});
             this.dgvResult.Location = new System.Drawing.Point(3, 121);
             this.dgvResult.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvResult.Name = "dgvResult";
             this.dgvResult.Size = new System.Drawing.Size(1193, 411);
             this.dgvResult.TabIndex = 7;
-            // 
-            // colNo
-            // 
-            this.colNo.HeaderText = "No";
-            this.colNo.Name = "colNo";
-            this.colNo.Width = 65;
-            // 
-            // colTestCode
-            // 
-            this.colTestCode.HeaderText = "Test Code";
-            this.colTestCode.Name = "colTestCode";
-            this.colTestCode.Width = 120;
-            // 
-            // colTestMethod
-            // 
-            this.colTestMethod.HeaderText = "Test Method";
-            this.colTestMethod.Name = "colTestMethod";
-            this.colTestMethod.Width = 250;
-            // 
-            // colStd
-            // 
-            this.colStd.HeaderText = "Std";
-            this.colStd.Name = "colStd";
-            this.colStd.Width = 85;
-            // 
-            // colMin
-            // 
-            this.colMin.HeaderText = "Min";
-            this.colMin.Name = "colMin";
-            // 
-            // colMax
-            // 
-            this.colMax.HeaderText = "Max";
-            this.colMax.Name = "colMax";
-            // 
-            // colStandart
-            // 
-            this.colStandart.HeaderText = "Standart";
-            this.colStandart.Name = "colStandart";
-            this.colStandart.Width = 130;
-            // 
-            // colResult1
-            // 
-            this.colResult1.HeaderText = "Result 1";
-            this.colResult1.Name = "colResult1";
-            // 
-            // colResult2
-            // 
-            this.colResult2.HeaderText = "Result 2";
-            this.colResult2.Name = "colResult2";
-            // 
-            // colFlagValidate
-            // 
-            this.colFlagValidate.HeaderText = "Flag Validate";
-            this.colFlagValidate.Name = "colFlagValidate";
             // 
             // label2
             // 
@@ -314,6 +257,56 @@
             this.label1.Size = new System.Drawing.Size(68, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "Entry No :";
+            // 
+            // colNo
+            // 
+            this.colNo.HeaderText = "No";
+            this.colNo.Name = "colNo";
+            this.colNo.Width = 65;
+            // 
+            // colTestCode
+            // 
+            this.colTestCode.HeaderText = "Test Code";
+            this.colTestCode.Name = "colTestCode";
+            this.colTestCode.Width = 120;
+            // 
+            // colTestMethod
+            // 
+            this.colTestMethod.HeaderText = "Test Method";
+            this.colTestMethod.Name = "colTestMethod";
+            this.colTestMethod.Width = 250;
+            // 
+            // colTestQuestion
+            // 
+            this.colTestQuestion.HeaderText = "Test Question";
+            this.colTestQuestion.Name = "colTestQuestion";
+            this.colTestQuestion.Width = 250;
+            // 
+            // colStd
+            // 
+            this.colStd.HeaderText = "Std";
+            this.colStd.Name = "colStd";
+            this.colStd.Width = 85;
+            // 
+            // colMin
+            // 
+            this.colMin.HeaderText = "Min";
+            this.colMin.Name = "colMin";
+            // 
+            // colMax
+            // 
+            this.colMax.HeaderText = "Max";
+            this.colMax.Name = "colMax";
+            // 
+            // colResult
+            // 
+            this.colResult.HeaderText = "Result";
+            this.colResult.Name = "colResult";
+            // 
+            // colFlagValidate
+            // 
+            this.colFlagValidate.HeaderText = "Flag Validate";
+            this.colFlagValidate.Name = "colFlagValidate";
             // 
             // frmEntResult
             // 
@@ -351,21 +344,20 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtProdDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTestCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTestMethod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStandart;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colResult1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colResult2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFlagValidate;
         private System.Windows.Forms.MaskedTextBox mtProdDate;
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox mtConclusionDate;
         private System.Windows.Forms.DateTimePicker dtConclusionDate;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTestCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTestMethod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTestQuestion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colResult;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFlagValidate;
     }
 }

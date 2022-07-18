@@ -53,9 +53,12 @@ namespace CREntry_OFF
             if(dtTbl.Rows.Count > 0)
                 foreach(DataRow dr in dtTbl.Rows)
                 {
-                    dgvResult.Rows[idx].Cells[""].Value = dr[""].ToString().Trim();
-                    dgvResult.Rows[idx].Cells[""].Value = dr[""].ToString().Trim();
-                    dgvResult.Rows[idx].Cells[""].Value = dr[""].ToString().Trim();
+                    dgvResult.Rows[idx].Cells["colTestCode"].Value = dr[""].ToString().Trim();
+                    dgvResult.Rows[idx].Cells["colTestMethod"].Value = dr[""].ToString().Trim();
+                    dgvResult.Rows[idx].Cells["colTestQuestion"].Value = dr[""].ToString().Trim();
+                    dgvResult.Rows[idx].Cells["colStd"].Value = dr[""].ToString().Trim();
+                    dgvResult.Rows[idx].Cells["colMin"].Value = dr[""].ToString().Trim();
+                    dgvResult.Rows[idx].Cells["colMax"].Value = dr[""].ToString().Trim();
                     idx++;
                 }
         }
