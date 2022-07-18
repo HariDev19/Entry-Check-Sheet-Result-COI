@@ -25,7 +25,7 @@ namespace ChkResultLib
 
         public bool funAddMachine(string machineCode)
         {
-            strInsert = "INSERT INTO [dbo].["
+            strInsert = "INSERT INTO [dbo].[]";
             return ret;
         }
 
