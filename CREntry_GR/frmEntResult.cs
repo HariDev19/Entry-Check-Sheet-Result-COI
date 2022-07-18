@@ -16,6 +16,10 @@ namespace CREntry_GR
     {
         DataTable dtTbl = new DataTable();
         private readonly string JobNo;
+        private readonly string serverName;
+        private readonly string dbName;
+        private readonly string userDb;
+        private readonly string passDb;
         private readonly int entryNo;
         private readonly SQLClass sqlCls = new SQLClass();
         private readonly DataAccessClass dac = new DataAccessClass();
@@ -25,6 +29,11 @@ namespace CREntry_GR
             dtTbl = dtChkSheet;
             JobNo = JobNbr;
             entryNo = entryNbr;
+
+            serverName = Properties.Settings.Default.serverName;
+            dbName = Properties.Settings.Default.dbName;
+            userDb = Properties.Settings.Default.userDb;
+            passDb = Properties.Settings.Default.passDb;
         }
 
         private void frmEntResult_Load(object sender, EventArgs e)
@@ -52,7 +61,11 @@ namespace CREntry_GR
 
         private void btnAddMachine_Click(object sender, EventArgs e)
         {
-
+            string strQry = sqlCls.funAddMachine(cmbMachine.Text.Trim());
+            if (dac.funExecSingleQuery(serverName, dbName, userDb, passDb, strQry))
+                MessageBox.Show("Machine succesfully added to local system.", "INFORMATION", MessageBoxButtons.OK);
+            else
+                MessageBox.Show("Machine cannot be added to local system.", "ERROR", MessageBoxButtons.OK);
         }
 
         private void btnNew_Click(object sender, EventArgs e)

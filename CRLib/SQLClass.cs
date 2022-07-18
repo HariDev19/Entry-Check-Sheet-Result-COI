@@ -23,10 +23,10 @@ namespace ChkResultLib
             return ret;
         }
 
-        public bool funAddMachine(string machineCode)
+        public string funAddMachine(string machineCode)
         {
-            strInsert = "INSERT INTO [dbo].[]";
-            return ret;
+            strInsert = "INSERT INTO [dbo].[Machine](MachineCode) VALUES('"+machineCode+"')";
+            return retStr;
         }
 
         public string funSelectCheckSheetInq(string jobcode, string proddate, string itemcode, string customer)
