@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ChkResultLib;
 
-namespace CREntry_GR
+namespace CREntry_OFF
 {
     public partial class frmEntResult : Form
     {

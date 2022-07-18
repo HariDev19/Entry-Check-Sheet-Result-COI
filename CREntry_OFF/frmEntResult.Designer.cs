@@ -1,4 +1,4 @@
-﻿namespace CREntry_GR
+﻿namespace CREntry_OFF
 {
     partial class frmEntResult
     {
