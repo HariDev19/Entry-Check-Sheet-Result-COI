@@ -57,6 +57,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.mtProdDate = new System.Windows.Forms.MaskedTextBox();
             this.pnlButton.SuspendLayout();
             this.pnlEntry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
@@ -105,6 +106,7 @@
             // 
             this.pnlEntry.BackColor = System.Drawing.Color.LightSkyBlue;
             this.pnlEntry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEntry.Controls.Add(this.mtProdDate);
             this.pnlEntry.Controls.Add(this.btnAddMachine);
             this.pnlEntry.Controls.Add(this.dtProdDate);
             this.pnlEntry.Controls.Add(this.cmbMachine);
@@ -143,11 +145,12 @@
             // 
             this.dtProdDate.CalendarFont = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtProdDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtProdDate.Location = new System.Drawing.Point(772, 76);
+            this.dtProdDate.Location = new System.Drawing.Point(895, 76);
             this.dtProdDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtProdDate.Name = "dtProdDate";
-            this.dtProdDate.Size = new System.Drawing.Size(138, 26);
+            this.dtProdDate.Size = new System.Drawing.Size(20, 26);
             this.dtProdDate.TabIndex = 15;
+            this.dtProdDate.CloseUp += new System.EventHandler(this.dtProdDate_CloseUp);
             // 
             // cmbMachine
             // 
@@ -327,6 +330,15 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Entry No :";
             // 
+            // mtProdDate
+            // 
+            this.mtProdDate.Location = new System.Drawing.Point(774, 76);
+            this.mtProdDate.Mask = "##/##/####";
+            this.mtProdDate.Name = "mtProdDate";
+            this.mtProdDate.Size = new System.Drawing.Size(119, 26);
+            this.mtProdDate.TabIndex = 17;
+            this.mtProdDate.TextChanged += new System.EventHandler(this.mtProdDate_TextChanged);
+            // 
             // frmEntResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -380,5 +392,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colResult1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colResult2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFlagValidate;
+        private System.Windows.Forms.MaskedTextBox mtProdDate;
     }
 }

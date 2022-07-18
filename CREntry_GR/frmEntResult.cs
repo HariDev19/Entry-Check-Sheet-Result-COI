@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -70,7 +71,49 @@ namespace CREntry_GR
 
         private void btnNew_Click(object sender, EventArgs e)
         {
+            funClearObjectField();
+        }
 
+        private void funClearObjectField()
+        {
+            txtSet.Text = "";
+            txtPosition.Text = "";
+            cmbMachine.Text = "";
+            mtProdDate.Clear();
+
+            if(dgvResult.Rows.Count > 0)
+                for(int x=0; x <= dgvResult.Rows.Count -1; x++)
+                {
+                    dgvResult.Rows[x].Cells["colResult1"].Value = "";
+                    dgvResult.Rows[x].Cells["colResult2"].Value = "";
+                    dgvResult.Rows[x].Cells["colFlagValidate"].Value = "";
+                }
+        }
+
+        private void mtProdDate_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string mtVal = mtProdDate.Text.Trim();
+                if (mtVal.Length == 10)
+                {
+                    DateTime dt;
+                    dt = DateTime.ParseExact(mtProdDate.Text, "dd/MM/yyyy", null);
+                    dtProdDate.Value = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK);
+                mtProdDate.Clear();
+            }
+        }
+
+        private void dtProdDate_CloseUp(object sender, EventArgs e)
+        {
+            DateTime dtProd = dtProdDate.Value;
+            string strProdDate = dtProd.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+            mtProdDate.Text = strProdDate;
         }
     }
 }
