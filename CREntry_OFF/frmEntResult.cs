@@ -60,15 +60,6 @@ namespace CREntry_OFF
                 }
         }
 
-        private void btnAddMachine_Click(object sender, EventArgs e)
-        {
-            string strQry = sqlCls.funAddMachine(cmbMachine.Text.Trim());
-            if (dac.funExecSingleQuery(serverName, dbName, userDb, passDb, strQry))
-                MessageBox.Show("Machine succesfully added to local system.", "INFORMATION", MessageBoxButtons.OK);
-            else
-                MessageBox.Show("Machine cannot be added to local system.", "ERROR", MessageBoxButtons.OK);
-        }
-
         private void btnNew_Click(object sender, EventArgs e)
         {
             funClearObjectField();
@@ -76,10 +67,10 @@ namespace CREntry_OFF
 
         private void funClearObjectField()
         {
-            txtSet.Text = "";
-            txtPosition.Text = "";
-            cmbMachine.Text = "";
+            mtConclusionDate.Clear();
             mtProdDate.Clear();
+            txtRemark.Text = "";
+            txtEntryNo.Text = Convert.ToString(Convert.ToInt32(txtEntryNo.Text.Trim()) + 1);
 
             if(dgvResult.Rows.Count > 0)
                 for(int x=0; x <= dgvResult.Rows.Count -1; x++)

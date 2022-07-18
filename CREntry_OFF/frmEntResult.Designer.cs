@@ -33,14 +33,15 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.pnlEntry = new System.Windows.Forms.Panel();
-            this.btnAddMachine = new System.Windows.Forms.Button();
+            this.txtRemark = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.mtConclusionDate = new System.Windows.Forms.MaskedTextBox();
+            this.dtConclusionDate = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.mtProdDate = new System.Windows.Forms.MaskedTextBox();
             this.dtProdDate = new System.Windows.Forms.DateTimePicker();
-            this.cmbMachine = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtEntryNo = new System.Windows.Forms.TextBox();
-            this.txtPosition = new System.Windows.Forms.TextBox();
-            this.txtSet = new System.Windows.Forms.TextBox();
             this.txtJobNo = new System.Windows.Forms.TextBox();
             this.dgvResult = new System.Windows.Forms.DataGridView();
             this.colNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,11 +54,8 @@
             this.colResult1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colResult2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFlagValidate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.mtProdDate = new System.Windows.Forms.MaskedTextBox();
             this.pnlButton.SuspendLayout();
             this.pnlEntry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
@@ -107,80 +105,100 @@
             // 
             this.pnlEntry.BackColor = System.Drawing.Color.LightSkyBlue;
             this.pnlEntry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEntry.Controls.Add(this.txtRemark);
+            this.pnlEntry.Controls.Add(this.label4);
+            this.pnlEntry.Controls.Add(this.mtConclusionDate);
+            this.pnlEntry.Controls.Add(this.dtConclusionDate);
+            this.pnlEntry.Controls.Add(this.label3);
             this.pnlEntry.Controls.Add(this.mtProdDate);
-            this.pnlEntry.Controls.Add(this.btnAddMachine);
             this.pnlEntry.Controls.Add(this.dtProdDate);
-            this.pnlEntry.Controls.Add(this.cmbMachine);
             this.pnlEntry.Controls.Add(this.label5);
-            this.pnlEntry.Controls.Add(this.label6);
             this.pnlEntry.Controls.Add(this.txtEntryNo);
-            this.pnlEntry.Controls.Add(this.txtPosition);
-            this.pnlEntry.Controls.Add(this.txtSet);
             this.pnlEntry.Controls.Add(this.txtJobNo);
             this.pnlEntry.Controls.Add(this.dgvResult);
-            this.pnlEntry.Controls.Add(this.label4);
-            this.pnlEntry.Controls.Add(this.label3);
             this.pnlEntry.Controls.Add(this.label2);
             this.pnlEntry.Controls.Add(this.label1);
             this.pnlEntry.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlEntry.Location = new System.Drawing.Point(6, 85);
             this.pnlEntry.Name = "pnlEntry";
-            this.pnlEntry.Size = new System.Drawing.Size(1201, 529);
+            this.pnlEntry.Size = new System.Drawing.Size(1201, 538);
             this.pnlEntry.TabIndex = 11;
             // 
-            // btnAddMachine
+            // txtRemark
             // 
-            this.btnAddMachine.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnAddMachine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddMachine.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMachine.Location = new System.Drawing.Point(914, 24);
-            this.btnAddMachine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAddMachine.Name = "btnAddMachine";
-            this.btnAddMachine.Size = new System.Drawing.Size(31, 32);
-            this.btnAddMachine.TabIndex = 16;
-            this.btnAddMachine.Text = "+";
-            this.btnAddMachine.UseVisualStyleBackColor = false;
-            this.btnAddMachine.Click += new System.EventHandler(this.btnAddMachine_Click);
+            this.txtRemark.Location = new System.Drawing.Point(830, 14);
+            this.txtRemark.Multiline = true;
+            this.txtRemark.Name = "txtRemark";
+            this.txtRemark.Size = new System.Drawing.Size(337, 91);
+            this.txtRemark.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(751, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 18);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Remark :";
+            // 
+            // mtConclusionDate
+            // 
+            this.mtConclusionDate.Location = new System.Drawing.Point(510, 74);
+            this.mtConclusionDate.Mask = "##/##/####";
+            this.mtConclusionDate.Name = "mtConclusionDate";
+            this.mtConclusionDate.Size = new System.Drawing.Size(119, 26);
+            this.mtConclusionDate.TabIndex = 20;
+            // 
+            // dtConclusionDate
+            // 
+            this.dtConclusionDate.CalendarFont = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtConclusionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtConclusionDate.Location = new System.Drawing.Point(631, 73);
+            this.dtConclusionDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtConclusionDate.Name = "dtConclusionDate";
+            this.dtConclusionDate.Size = new System.Drawing.Size(20, 26);
+            this.dtConclusionDate.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(371, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 18);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Conclusion Date :";
+            // 
+            // mtProdDate
+            // 
+            this.mtProdDate.Location = new System.Drawing.Point(510, 22);
+            this.mtProdDate.Mask = "##/##/####";
+            this.mtProdDate.Name = "mtProdDate";
+            this.mtProdDate.Size = new System.Drawing.Size(119, 26);
+            this.mtProdDate.TabIndex = 17;
+            this.mtProdDate.TextChanged += new System.EventHandler(this.mtProdDate_TextChanged);
             // 
             // dtProdDate
             // 
             this.dtProdDate.CalendarFont = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtProdDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtProdDate.Location = new System.Drawing.Point(895, 76);
+            this.dtProdDate.Location = new System.Drawing.Point(631, 21);
             this.dtProdDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtProdDate.Name = "dtProdDate";
             this.dtProdDate.Size = new System.Drawing.Size(20, 26);
             this.dtProdDate.TabIndex = 15;
             this.dtProdDate.CloseUp += new System.EventHandler(this.dtProdDate_CloseUp);
             // 
-            // cmbMachine
-            // 
-            this.cmbMachine.FormattingEnabled = true;
-            this.cmbMachine.Location = new System.Drawing.Point(774, 27);
-            this.cmbMachine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbMachine.Name = "cmbMachine";
-            this.cmbMachine.Size = new System.Drawing.Size(136, 26);
-            this.cmbMachine.TabIndex = 14;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(686, 81);
+            this.label5.Location = new System.Drawing.Point(371, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 18);
             this.label5.TabIndex = 13;
             this.label5.Text = "Prod. Date :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(686, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 18);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Machine :";
             // 
             // txtEntryNo
             // 
@@ -190,20 +208,6 @@
             this.txtEntryNo.ReadOnly = true;
             this.txtEntryNo.Size = new System.Drawing.Size(70, 26);
             this.txtEntryNo.TabIndex = 11;
-            // 
-            // txtPosition
-            // 
-            this.txtPosition.Location = new System.Drawing.Point(449, 78);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(119, 26);
-            this.txtPosition.TabIndex = 10;
-            // 
-            // txtSet
-            // 
-            this.txtSet.Location = new System.Drawing.Point(449, 29);
-            this.txtSet.Name = "txtSet";
-            this.txtSet.Size = new System.Drawing.Size(119, 26);
-            this.txtSet.TabIndex = 9;
             // 
             // txtJobNo
             // 
@@ -233,7 +237,7 @@
             this.dgvResult.Location = new System.Drawing.Point(3, 121);
             this.dgvResult.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvResult.Name = "dgvResult";
-            this.dgvResult.Size = new System.Drawing.Size(1193, 402);
+            this.dgvResult.Size = new System.Drawing.Size(1193, 411);
             this.dgvResult.TabIndex = 7;
             // 
             // colNo
@@ -291,26 +295,6 @@
             this.colFlagValidate.HeaderText = "Flag Validate";
             this.colFlagValidate.Name = "colFlagValidate";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(371, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Position :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(371, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 18);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Set :";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -331,21 +315,12 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Entry No :";
             // 
-            // mtProdDate
-            // 
-            this.mtProdDate.Location = new System.Drawing.Point(774, 76);
-            this.mtProdDate.Mask = "##/##/####";
-            this.mtProdDate.Name = "mtProdDate";
-            this.mtProdDate.Size = new System.Drawing.Size(119, 26);
-            this.mtProdDate.TabIndex = 17;
-            this.mtProdDate.TextChanged += new System.EventHandler(this.mtProdDate_TextChanged);
-            // 
             // frmEntResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1212, 625);
+            this.ClientSize = new System.Drawing.Size(1212, 629);
             this.Controls.Add(this.pnlEntry);
             this.Controls.Add(this.pnlButton);
             this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -370,18 +345,11 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Panel pnlEntry;
         private System.Windows.Forms.TextBox txtEntryNo;
-        private System.Windows.Forms.TextBox txtPosition;
-        private System.Windows.Forms.TextBox txtSet;
         private System.Windows.Forms.TextBox txtJobNo;
         private System.Windows.Forms.DataGridView dgvResult;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbMachine;
-        private System.Windows.Forms.Button btnAddMachine;
         private System.Windows.Forms.DateTimePicker dtProdDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTestCode;
@@ -394,5 +362,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colResult2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFlagValidate;
         private System.Windows.Forms.MaskedTextBox mtProdDate;
+        private System.Windows.Forms.TextBox txtRemark;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox mtConclusionDate;
+        private System.Windows.Forms.DateTimePicker dtConclusionDate;
+        private System.Windows.Forms.Label label3;
     }
 }
