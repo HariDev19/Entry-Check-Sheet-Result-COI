@@ -38,10 +38,10 @@
             this.cmbMachine = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnEntryNo = new System.Windows.Forms.TextBox();
+            this.txtEntryNo = new System.Windows.Forms.TextBox();
             this.txtPosition = new System.Windows.Forms.TextBox();
             this.txtSet = new System.Windows.Forms.TextBox();
-            this.txtJobCode = new System.Windows.Forms.TextBox();
+            this.txtJobNo = new System.Windows.Forms.TextBox();
             this.dgvResult = new System.Windows.Forms.DataGridView();
             this.colNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTestCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,6 +99,7 @@
             this.btnNew.TabIndex = 6;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // pnlEntry
             // 
@@ -109,10 +110,10 @@
             this.pnlEntry.Controls.Add(this.cmbMachine);
             this.pnlEntry.Controls.Add(this.label5);
             this.pnlEntry.Controls.Add(this.label6);
-            this.pnlEntry.Controls.Add(this.btnEntryNo);
+            this.pnlEntry.Controls.Add(this.txtEntryNo);
             this.pnlEntry.Controls.Add(this.txtPosition);
             this.pnlEntry.Controls.Add(this.txtSet);
-            this.pnlEntry.Controls.Add(this.txtJobCode);
+            this.pnlEntry.Controls.Add(this.txtJobNo);
             this.pnlEntry.Controls.Add(this.dgvResult);
             this.pnlEntry.Controls.Add(this.label4);
             this.pnlEntry.Controls.Add(this.label3);
@@ -177,14 +178,14 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Machine :";
             // 
-            // btnEntryNo
+            // txtEntryNo
             // 
-            this.btnEntryNo.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnEntryNo.Location = new System.Drawing.Point(131, 29);
-            this.btnEntryNo.Name = "btnEntryNo";
-            this.btnEntryNo.ReadOnly = true;
-            this.btnEntryNo.Size = new System.Drawing.Size(70, 26);
-            this.btnEntryNo.TabIndex = 11;
+            this.txtEntryNo.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtEntryNo.Location = new System.Drawing.Point(131, 29);
+            this.txtEntryNo.Name = "txtEntryNo";
+            this.txtEntryNo.ReadOnly = true;
+            this.txtEntryNo.Size = new System.Drawing.Size(70, 26);
+            this.txtEntryNo.TabIndex = 11;
             // 
             // txtPosition
             // 
@@ -200,14 +201,14 @@
             this.txtSet.Size = new System.Drawing.Size(119, 26);
             this.txtSet.TabIndex = 9;
             // 
-            // txtJobCode
+            // txtJobNo
             // 
-            this.txtJobCode.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtJobCode.Location = new System.Drawing.Point(131, 79);
-            this.txtJobCode.Name = "txtJobCode";
-            this.txtJobCode.ReadOnly = true;
-            this.txtJobCode.Size = new System.Drawing.Size(131, 26);
-            this.txtJobCode.TabIndex = 8;
+            this.txtJobNo.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtJobNo.Location = new System.Drawing.Point(131, 79);
+            this.txtJobNo.Name = "txtJobNo";
+            this.txtJobNo.ReadOnly = true;
+            this.txtJobNo.Size = new System.Drawing.Size(131, 26);
+            this.txtJobNo.TabIndex = 8;
             // 
             // dgvResult
             // 
@@ -228,7 +229,6 @@
             this.dgvResult.Location = new System.Drawing.Point(3, 121);
             this.dgvResult.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvResult.Name = "dgvResult";
-            this.dgvResult.ReadOnly = true;
             this.dgvResult.Size = new System.Drawing.Size(1193, 402);
             this.dgvResult.TabIndex = 7;
             // 
@@ -236,66 +236,56 @@
             // 
             this.colNo.HeaderText = "No";
             this.colNo.Name = "colNo";
-            this.colNo.ReadOnly = true;
             this.colNo.Width = 65;
             // 
             // colTestCode
             // 
             this.colTestCode.HeaderText = "Test Code";
             this.colTestCode.Name = "colTestCode";
-            this.colTestCode.ReadOnly = true;
             this.colTestCode.Width = 120;
             // 
             // colTestMethod
             // 
             this.colTestMethod.HeaderText = "Test Method";
             this.colTestMethod.Name = "colTestMethod";
-            this.colTestMethod.ReadOnly = true;
             this.colTestMethod.Width = 250;
             // 
             // colStd
             // 
             this.colStd.HeaderText = "Std";
             this.colStd.Name = "colStd";
-            this.colStd.ReadOnly = true;
             this.colStd.Width = 85;
             // 
             // colMin
             // 
             this.colMin.HeaderText = "Min";
             this.colMin.Name = "colMin";
-            this.colMin.ReadOnly = true;
             // 
             // colMax
             // 
             this.colMax.HeaderText = "Max";
             this.colMax.Name = "colMax";
-            this.colMax.ReadOnly = true;
             // 
             // colStandart
             // 
             this.colStandart.HeaderText = "Standart";
             this.colStandart.Name = "colStandart";
-            this.colStandart.ReadOnly = true;
             this.colStandart.Width = 130;
             // 
             // colResult1
             // 
             this.colResult1.HeaderText = "Result 1";
             this.colResult1.Name = "colResult1";
-            this.colResult1.ReadOnly = true;
             // 
             // colResult2
             // 
             this.colResult2.HeaderText = "Result 2";
             this.colResult2.Name = "colResult2";
-            this.colResult2.ReadOnly = true;
             // 
             // colFlagValidate
             // 
             this.colFlagValidate.HeaderText = "Flag Validate";
             this.colFlagValidate.Name = "colFlagValidate";
-            this.colFlagValidate.ReadOnly = true;
             // 
             // label4
             // 
@@ -366,10 +356,10 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Panel pnlEntry;
-        private System.Windows.Forms.TextBox btnEntryNo;
+        private System.Windows.Forms.TextBox txtEntryNo;
         private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.TextBox txtSet;
-        private System.Windows.Forms.TextBox txtJobCode;
+        private System.Windows.Forms.TextBox txtJobNo;
         private System.Windows.Forms.DataGridView dgvResult;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

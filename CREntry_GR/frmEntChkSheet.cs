@@ -47,7 +47,7 @@ namespace CREntry_GR
             {
                 DataTable dtStored = new DataTable();
                 funFilldtStored(dtStored);
-                frmEntResult fEntResult = new frmEntResult(dtStored, txtJobNo.Text.Trim());
+                frmEntResult fEntResult = new frmEntResult(dtStored, txtJobNo.Text.Trim(), 1);
                 fEntResult.Show();
                 this.Hide();
             }
