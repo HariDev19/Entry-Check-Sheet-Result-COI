@@ -103,7 +103,7 @@ namespace CREntry_GR
             }
             else
             {
-                string strSelect = sqlCls.funRetrieveDataFromRadius(txtJobNo.Text.Trim());
+                string strSelect = sqlCls.funRetrieveDataFromRadius("GR",txtJobNo.Text.Trim());
                 DataTable dt = dac.funGetDataTable(serverName, dbName, userDb, passDb, strSelect);
                 if (dt.Rows.Count > 0)
                 {

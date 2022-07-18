@@ -64,9 +64,10 @@ namespace ChkResultLib
             return retStr;
         }
 
-        public string funRetrieveDataFromRadius(string JobNo)
+        public string funRetrieveDataFromRadius(string type, string JobNo)
         {
-            retStr = "";
+
+            retStr = @"";
             return retStr;
         }
     }

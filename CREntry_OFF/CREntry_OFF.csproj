@@ -35,9 +35,6 @@
     <ApplicationIcon>DNPI.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CheckResultLib">
-      <HintPath>..\CRLib\bin\Debug\CheckResultLib.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -114,6 +111,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DNPI.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRLib\ChkResultLib.csproj">
+      <Project>{ca83fde0-0672-4b4f-81af-3020264ae8f9}</Project>
+      <Name>ChkResultLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
